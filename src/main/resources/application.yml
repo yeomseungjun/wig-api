@@ -7,5 +7,5 @@ spring:
   profiles:
     active: loc
     group:
-      "loc": "common"
-      "prd": "common"
+      "loc": "common, logging-cons, db-loc"
+      "prd": "common, logging-file, db-prd"

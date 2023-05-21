@@ -4,7 +4,7 @@
 spring:
   config:
     activate:
-      on-profile: "logging-loc"
+      on-profile: "logging-cons"
 logging:
   pattern:
     console: "%d{yy-MM-dd HH:mm:ss} %highlight([%-5level]) %-50([%logger{0}:%line]) - %msg%n"
@@ -21,7 +21,7 @@ logging:
 spring:
   config:
     activate:
-      on-profile: "logging-prd"
+      on-profile: "logging-file"
 logging:
   pattern:
     file: "%d{yy-MM-dd HH:mm:ss} %highlight([%-5level]) %-50([%logger{0}:%line]) - %msg%n"
