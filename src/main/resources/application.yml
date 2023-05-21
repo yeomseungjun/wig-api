@@ -1,0 +1,11 @@
+spring:
+  config:
+    import:
+      - classpath:/config/config-common.yml
+      - classpath:/config/config-db.yml
+      - classpath:/config/config-logging.yml
+  profiles:
+    active: loc
+    group:
+      "loc": "common"
+      "prd": "common"

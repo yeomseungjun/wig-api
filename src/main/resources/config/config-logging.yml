@@ -1,0 +1,40 @@
+
+# ** Logging **
+## DEV
+spring:
+  config:
+    activate:
+      on-profile: "logging-loc"
+logging:
+  pattern:
+    console: "%d{yy-MM-dd HH:mm:ss} %highlight([%-5level]) %-50([%logger{0}:%line]) - %msg%n"
+  level:
+    root: info
+    com.lucas.yeomcoco: debug
+    org.hibernate.SQL: false
+#    org.hibernate.orm.jdbc.bind: trace
+    p6spy: info
+
+---
+
+## PROD
+spring:
+  config:
+    activate:
+      on-profile: "logging-prd"
+logging:
+  pattern:
+    file: "%d{yy-MM-dd HH:mm:ss} %highlight([%-5level]) %-50([%logger{0}:%line]) - %msg%n"
+  file:
+    name: ./logs/yeomcoco.log
+  logback:
+    rollingpolicy:
+      file-name-pattern: ./logs/yeomcoco_%d{yyyy-MM-dd}_%i.log
+      max-file-size: 10MB
+      max-history: 30
+  level:
+    root: info
+    com.lucas.yeomcoco: debug
+    org.hibernate.SQL: false
+    #    org.hibernate.orm.jdbc.bind: trace
+    p6spy: info

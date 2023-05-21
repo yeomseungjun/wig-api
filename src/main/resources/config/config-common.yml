@@ -1,0 +1,11 @@
+
+# ** Common **
+
+spring:
+  config:
+    activate:
+      on-profile: "common"
+server:
+  port: 1080
+  tomcat:
+    uri-encoding: UTF-8
