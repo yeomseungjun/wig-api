@@ -37,3 +37,5 @@ out/
 .vscode/
 
 ## DB Connect Info
+# 추적 제외 : git update-index --assume-unchanged src/main/resources/config/config-db.yml
+# 추적 복구 : git update-index --no-assume-unchanged src/main/resources/config/config-db.yml
